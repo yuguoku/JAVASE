@@ -1,0 +1,2 @@
+ String str="我是你的谁,我是你的剑";
+            str.trim();
