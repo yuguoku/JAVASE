@@ -1,0 +1,5 @@
+public static int getRandom(int min, int max){
+              Random random = new Random();
+              int i = random.nextInt(max) % (max - min + 1) + min;
+              return i;
+          }
