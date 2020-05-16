@@ -1,0 +1,4 @@
+String str1="avabc";
+                        String str2="avab";
+                        if(str1.compareTo(str2)) System.out.println("相等");
+                        else System.out.println("不相等");
