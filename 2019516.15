@@ -1,0 +1,3 @@
+char a[]="abcd";
+                         String str=new String(a);
+                                    System.out.println(str);
