@@ -1,0 +1,23 @@
+private boolean retain all(Collection<?> c) {
+        final Object[] elementData = this.elementData;
+        int r = 0, w = 0;
+        boolean modified = false;     
+            for (; r < size; r++)
+                if (c.contains(elementData[r]))
+                    elementData[w++] = elementData[r];                 
+            if (r != size) {
+                System.arraycopy(elementData, r,
+                                 elementData, w,
+                                 size - r);
+                w += size - r;
+            }
+            if (w != size) 
+            {               
+                for (int i = w; i < size; i++)
+                    elementData[i] = null;
+                modCount += size - w;
+                size = w;
+                modified = true;
+            }       
+        return modified;
+    }
