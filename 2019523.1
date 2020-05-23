@@ -1,0 +1,35 @@
+public class Student(){
+    private int id;
+    private String name;
+    private int score;
+    private Set<Course> course;
+    public add(int order,String cname){
+        Course c=new Course(order,cname);
+        course.add(c);
+    }
+    public remove(int order,String cname){
+            Course c=new Course(order,cname);
+            course.remove(c);
+        }
+}
+public class Course(){
+    private int order;
+    private String cname;
+}
+public class courseList(){
+    pubic static void main(String [] args){
+        private static List<Student> data = new ArrayList<Student>();
+        int j = 10;
+                    Random random = new Random();
+                    for (int i = 0;i < 40;++i){
+                        data.add(new Student(180201+i,"同学"+(i+j),random.nextInt(51)+50));
+                    }
+        Iterator<Student> iterator = data.iterator();
+                while (iterator.hasNext()){
+                    Student next1 = iterator.next();
+                    int id = next1.getId();
+                    String name = next1.getName();
+                    int score = next1.getScore();
+                    System.out.println("学号："+id+" 姓名："+name+" 成绩："+score);
+    }
+}
