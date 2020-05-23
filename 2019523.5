@@ -1,0 +1,23 @@
+public class Collection1 implements Collection(){
+    transient Object[] elementData;
+     private int size;
+
+
+    　　 public Collection1() {　　
+            super();
+            this.elementData=NULL;
+        }
+
+   public boolean add(E e)
+   {
+           elementData[size++] = e;
+           return true;
+       }
+
+
+    public void add(int index, E element)
+    {
+            System.arraycopy(elementData, index, elementData, index + 1,size - index);
+            elementData[index] = element;
+            size++;
+        }
